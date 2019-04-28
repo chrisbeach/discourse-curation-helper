@@ -1,10 +1,13 @@
 {{#if this.siteSettings.curation_helper_enabled}}
-    <section class='field'>
-        <div class="enable_reject_button">
-            <label class="checkbox-label">
-                {{input type="checkbox" checked=category.enable_reject_button}}
-                {{i18n 'curation.enable_reject_button'}}
-            </label>
-        </div>
+    <section>
+        <h3>Curation</h3>
+        <section class='field'>
+            <div class="enable_reject_button">
+                <label class="checkbox-label">
+                    {{input type="checkbox" checked=category.enable_reject_button}}
+                    {{i18n 'curation.enable_reject_button'}}
+                </label>
+            </div>
+        </section>
     </section>
 {{/if}}

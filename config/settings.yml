@@ -1,4 +1,8 @@
 plugins:
   curation_helper_enabled:
-    default: false
+    default: true
+    client: true
+  curation_helper_enabled_on_topics_of_users_with_primary_group:
+    default: ""
+    type: group
     client: true

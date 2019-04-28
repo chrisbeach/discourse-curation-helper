@@ -1,6 +1,7 @@
 en:
   site_settings:
     curation_helper_enabled: "Curation helper plugin enabled?"
+    curation_helper_enabled_on_topics_of_users_with_primary_group: "If a user has this as their primary group, allow their topics to be curated"
   curation:
     topic_is_deleted: Topic is deleted
     topic_rejection_failed: Topic rejection failed
