@@ -1,0 +1,14 @@
+{{#if model.canTopicBeRejected }}
+    {{#if model.rejected_at}}
+        {{d-button class="btn"
+                   action="clickUndoRejectButton"
+                   actionParam=model
+                   label="curation.undo_reject"}}
+    {{else}}
+        {{d-button class="btn btn-danger btn-icon-text"
+                   action="clickRejectButton"
+                   actionParam=model
+                   icon="trash"
+                   label="curation.reject"}}
+    {{/if}}
+{{/if}}

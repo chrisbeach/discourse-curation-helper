@@ -1,0 +1,4 @@
+plugins:
+  curation_helper_enabled:
+    default: false
+    client: true

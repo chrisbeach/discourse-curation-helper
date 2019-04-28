@@ -1,0 +1,7 @@
+en:
+  site_settings:
+    curation_helper_enabled: "Curation helper plugin enabled?"
+  curation:
+    topic_is_deleted: Topic is deleted
+    topic_rejection_failed: Topic rejection failed
+    cant_reject_in_this_category: Can't reject from this category

@@ -1,0 +1,10 @@
+en:
+  js:
+    curation:
+      enable_curation_helper: Enable curation helper
+      enable_reject_button: Enable reject button
+      error_rejecting: Error while rejecting topic
+      error_undoing: Error while undoing
+      reject: Reject
+      undo_reject: Undo Rejection
+      reject_confirm: Are you sure you want to reject this topic? (it will be deleted)
