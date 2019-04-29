@@ -6,3 +6,6 @@ plugins:
     default: ""
     type: group
     client: true
+  curation_helper_min_user_trust:
+    default: 3
+    client: true

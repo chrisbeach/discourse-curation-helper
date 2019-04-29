@@ -35,8 +35,22 @@ after_initialize do
         DistributedMutex.synchronize("#{PLUGIN_NAME}-#{topic_id}") do
           topic = Topic.find_by_id(topic_id)
 
+          if user.trust_level < SiteSetting.curation_helper_min_user_trust
+            raise StandardError.new I18n.t("curation.higher_trust_level_required",
+                                           {min: SiteSetting.curation_helper_min_user_trust,
+                                            actual: user.trust_level})
+          end
+
+          if topic.user.primary_group.nil?
+            raise StandardError.new I18n.t("curation.author_lacks_primary_group")
+          end
+
+          if topic.user.primary_group.name != SiteSetting.curation_helper_enabled_on_topics_of_users_with_primary_group?
+            raise StandardError.new I18n.t("curation.author_has_wrong_primary_group")
+          end
+
           if topic.category.nil? || topic.category.custom_fields['enable_reject_button'] != "true"
-            raise StandardError.new I18n.t("curation.cant_reject_in_this_category")
+            raise StandardError.new I18n.t("curation.cant_curate_this_category")
           end
 
           # topic must not be deleted

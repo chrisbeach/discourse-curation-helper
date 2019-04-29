@@ -1,8 +1,14 @@
 en:
   site_settings:
     curation_helper_enabled: "Curation helper plugin enabled?"
+    curation_helper_min_user_trust: "Minimum user trust level to curate"
     curation_helper_enabled_on_topics_of_users_with_primary_group: "If a user has this as their primary group, allow their topics to be curated"
   curation:
     topic_is_deleted: Topic is deleted
+    author_lacks_primary_group: Author doesn't have a primary group
+    author_has_wrong_primary_group: Author has the wrong primary group for curation
     topic_rejection_failed: Topic rejection failed
-    cant_reject_in_this_category: Can't reject from this category
+    cant_curate_this_category: Can't curate this category
+    cant_curate_pm: Can't curate private messages
+    anon_cant_curate: Anonymous users cannot curate
+    higher_trust_level_required: Your trust level (%{actual}) is not yet high enough (%{min}) to participate in curation
